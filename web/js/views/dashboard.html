@@ -1,0 +1,24 @@
+<!--
+ Copyright (c) 2014, 2018, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+<div class="oj-hybrid-padding">
+  <h1>Dashboard Content Area</h1>
+  <div>
+    <!-- <oj-input-text value="[[label]]"></oj-input-text> -->
+    <!-- <oj-bind-for-each data="[[treedata]]">
+      <template data-oj-as="row">
+        <oj-input-text value="[[row.data.title]]"></oj-input-text>
+      </template>
+    </oj-bind-for-each> -->
+
+    <oj-tree-view id="treeview" data="[[treedata]]" selection-mode="multiple" aria-label="Tree View with JSON Data">
+      <template slot="itemTemplate" data-oj-as="row">
+        <span class="oj-treeview-item-icon"></span>
+        <span class="oj-treeview-item-text">
+          <oj-bind-text value="[[row.data.title]]"></oj-bind-text>
+        </span>
+      </template>
+    </oj-tree-view>
+  </div>
+</div>
